@@ -1,0 +1,826 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*Formateo básico*/
+*{
+	padding:0;
+	margin:0;
+	-webkit-box-sizing: border-box;	/*Los elementos anteriores no incrementan su ancho*/
+	-moz-box-sizing: border-box;
+	-box-sizing: border-box;
+}
+html{
+	height:100%;
+}
+/*Agregamos la fuente*/
+@font-face{
+	font-family: "New Cicle Fina";
+	src:url(../../interfaz/Fuente/New%20Cicle%20Fina.ttf);
+}
+@font-face{
+	font-family: "New Cicle Gordita";
+	src:url(../../interfaz/Fuente/New%20Cicle%20Gordita.ttf);
+}
+/*Estilo del cuerpo*/
+body{
+	font-family: "New Cicle Fina", Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;	
+	font-size:1em;
+	height:100%;
+	background:#FEFEFE;
+}
+header{	
+	width:100%;
+	height:20%;	
+	background:#01325D;
+}
+header img{
+	height:auto;
+	width:250px;	
+	max-width:100%;	
+	padding:20px 0px 20px 20px;
+}
+/*PIE*/
+.pie{
+	font-family: "New Cicle Gordita", Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;		
+	width:100%;
+	height:4%;
+	padding:10px 0 10px 0;
+	background:#01325D;
+	text-align:center;
+	color:#FFFFFF;	
+	position:absolute;
+	bottom:0;
+	left:0;
+	display:block;
+}
+.pie a{
+	color:#FFFFFF;
+	text-decoration:none;
+}
+/*FIN PIE*/
+
+.btn-menu{
+	display:none;
+}
+.identificador{	
+	font-family: "New Cicle Gordita", Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;	
+	color:#FFFFFF;
+	width:50%;	
+	text-align:right;
+	padding:20px 20px 0px 0px;
+	list-style:none;
+	overflow:hidden;
+	float:right;	
+}
+.identificador li{
+	padding-bottom:5px;
+}
+.identificador li a{
+	color:#FFFFFF;
+}
+/*Comiezo estilo del menu*/
+header nav{
+	font-family: "New Cicle Gordita", Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;	
+	background:#01325D;
+	z-index:1000;	/*Para que el menu quede siempre sobre todos los elementos, si hay problema puede aumentar el valor*/
+	max-width: 5000px;	/*Ancho maximo*/
+	width:100%;	/*Al achicar abarca solo el 95%*/
+	text-align:center;    
+/*	overflow:hidden;
+	float:right;	*/
+}
+header nav ul{
+	list-style:none;
+}
+header nav ul li{
+	display:inline-block;	/*No se usa float por que hay menu desplagable*/
+	position:relative;	/*Para los menus*/	
+	-webkit-transition:all 1s ease-out;
+	-moz-transition:all 1s ease-out;
+	-ms-transition:all 1s ease-out;
+	-o-transition:all 1s ease-out;	
+}
+header nav ul li:hover{	
+	background:#003768;
+}
+header nav ul li#cambiar_password{
+	display:none;
+}
+header nav ul li a{
+	color:#FFFFFF;
+	display:block;
+	text-decoration:none;
+	padding:18px 18px 18px 18px; 
+}
+header nav ul li a:hover{
+	color:#4D9501;
+}
+header nav ul li a span{
+	margin-right:10px;
+}
+
+/*Estilo de los submenu*/
+header nav ul li:hover .children{
+	display:block;
+}
+header nav ul li .children{
+	display:none;
+	background:#01325D;
+	position:absolute;	/*Los elementos padres deben ser position relative y los elementos hijos absolute*/
+	width:162%;	/*Para que sea mayor al padre*/
+	z-index:1000;	/*Para no tener problemas con los elementos*/
+}
+
+header nav ul li .children li{
+	display:block;
+	overflow:hidden;	/*Para resolver los problemas que trae el float*/
+	border-bottom:1px solid rgba(255,255,255,.5);
+}
+
+header nav ul li .children li a{
+	display:block;	/*Para abarcar el 100%*/
+}
+
+header nav ul li .children li a span{
+	float:right;
+	position:relative;
+	top:3px;
+	margin-right:0;
+	margin-left:10px;
+}
+/*ESTILO DEL FORMULARIO*/
+.mensaje_aviso{
+	font-family: "New Cicle Gordita", Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;		
+	width:50%;	
+	text-align:center;	
+	padding:10px 0 10px 0;
+	margin:0 auto;	
+	color:#FF0004;
+}
+.mensaje_aviso a{
+	text-decoration:none;
+	color:#FF0004;
+}
+.seccion_formulario{
+	width:50%;
+	margin:0 auto;
+	padding-top: 30px;
+	display:block;
+}
+.formulario{	
+	width:100%;
+}
+.lista_formulario{
+	width:100%;
+	list-style:none;	
+	text-align:center;
+}
+.titulo_campo{
+	width:100%;	
+	color:#01325D;
+	background-color:#4D9501;
+	font-family: "New Cicle Gordita", Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;	
+	text-align:center;
+	padding:15px 0 15px 0;
+
+}
+.nombre_campo{
+	font-family: "New Cicle Gordita", Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;	
+	color:#01325D;
+	width:200px;
+	padding:5px 0 15px 0;
+	text-align:left;
+}
+.dosPuntos{
+	font-family: "New Cicle Gordita", Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;	
+	color:#01325D;
+	width:20px;
+	padding:5px 0 15px 0;
+	text-align:center;
+}
+.valor_campo{
+	color:#01325D;
+	width:330px;
+	padding:6px 0 16px 0;
+	text-align:center;		
+}
+.valor_campo *{
+	width:100%;
+	padding:5px 0 5px 0;
+}
+#valor_campo_asociar{
+	width:70%;
+}
+.valor_campo input, .valor_campo textarea, .valor_campo select{
+	font-family: "New Cicle Gordita", Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;	
+	width:100%;
+	padding:5px 0px 5px 0px;
+	border:1.5px solid #024987;
+	-moz-border-radius:3px;
+	-ms-border-radius:3px;
+	-o-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+}
+.valor_campo input::-webkit-input-placeholder{
+	color:#FFFFFF;		
+}
+.valor_campo textarea::-webkit-input-placeholder{
+	color:#FFFFFF;		
+}
+.nombre_campo, .dosPuntos, .valor_campo{
+	display:inline-block;
+}
+.boton{
+	color:#4D9501;							/* Color del texto del boton */
+	font-size:1em;
+	font-weight:bolder;						/* Negrita del texto */
+	padding:.5rem 1rem .5rem 1rem;			/* Borde interno del boton */	
+				
+	background:#01325D;				/* Color de fondo */
+	background: -webkit-linear-gradient(top, #01325D, #000000);
+	background: -moz-linear-gradient(top, #01325D, #000000);
+	background: -o-linear-gradient(top, #01325D, #000000);
+	background: linear-gradient(top, #01325D, #000000);
+		
+	border: .1rem outset #4D9501;
+	-webkit-border-radius:.7rem;
+	-moz-border-radius:.7rem;
+	-o-border-radius:.7rem;
+	border-radius:.7rem;
+	cursor:pointer;							/* Forma del punter al posicionarse */		
+	transition-duration:1s;					/* animacion */				
+}
+.boton:hover{
+	color:#01325D;							/* Color del texto del boton */
+	font-size:1em;
+	font-weight:bolder;						/* Negrita del texto */
+	padding:.5rem 1rem .5rem 1rem;			/* Borde interno del boton */	
+				
+	background:#4D9501;				/* Color de fondo */
+	background: -webkit-linear-gradient(top, #4D9501, #000000);
+	background: -moz-linear-gradient(top, #4D9501, #000000);
+	background: -o-linear-gradient(top, #4D9501, #000000);
+	background: linear-gradient(top, #4D9501, #000000);
+		
+	border: .1rem outset #4D9501;
+	-webkit-border-radius:.7rem;
+	-moz-border-radius:.7rem;
+	-o-border-radius:.7rem;
+	border-radius:.7rem;
+	cursor:pointer;							/* Forma del punter al posicionarse */		
+	transition-duration:1s;					/* animacion */			
+}
+
+/*Imagen Sistemas y Carrucel*/
+.seccion_sistema{
+	width:100%;
+	height:80%;
+	position:absolute;   
+}
+.botones_imagen{
+	width:100%;	
+	height:100%;
+	background-image:url(../Imagenes/Fondo.jpg);
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:100% 100%; 
+}
+.botones_imagen2{
+	width:100%;	
+	height:100%;
+	background-image:url(../Imagenes/Fondo2.jpg);
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:100% 100%;	
+	border:.4rem solid #000000;
+}
+/*Subir documento*/
+.seccion_subir_documento, .articulo_subir_documento{
+	width:95%;
+	margin:0 auto;
+	padding-top: 20px;
+	display:block;
+}
+.lista_formulario_subir{
+	width:100%;
+	list-style:none;	
+	text-align:left;	
+}
+.titulo_campo{
+	width:100%;	
+	color:#01325D;
+	background-color:#4D9501;
+	font-family: "New Cicle Gordita", Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;	
+	text-align:center;
+	padding:15px 0 15px 0;
+
+}
+.nombre_campo_subir{
+	font-family: "New Cicle Gordita", Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;	
+	color:#01325D;
+	width:14%;
+	padding:25px 0 27px 50px;		
+	text-align:left;
+}
+.dosPuntos_subir{
+	font-family: "New Cicle Gordita", Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;	
+	color:#01325D;
+	width:3%;
+	padding:25px 0 27px 0;
+	text-align:center;
+}
+.lista_formulario_subir fieldset{
+	width:100%;
+}
+.valor_campo_subir{
+	color:#01325D;
+	width:28%;
+	padding-right:20px;		
+	text-align:left;		
+}
+.valor_campo_subir #boton_subirDocumento2{
+    display: none;
+}
+.valor_campo_subir2{
+	color:#01325D;
+	width:75.9%;
+	padding-right:20px;		
+	text-align:left;		
+}
+.valor_campo_subir input, .valor_campo_subir textarea, .valor_campo_subir select{
+	font-family: "New Cicle Gordita", Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;	
+	width:100%;
+	margin:20px 0 20px 10px;
+	padding:5px 0px 5px 0px;
+	border:1.5px solid #024987;
+	-moz-border-radius:3px;
+	-ms-border-radius:3px;
+	-o-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+}
+.valor_campo_subir2 textarea{
+	font-family: "New Cicle Gordita", Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;	
+	width:100%;
+	margin:20px 0 20px 10px;
+	padding:5px 0px 5px 0px;
+	border:1.5px solid #024987;
+	-moz-border-radius:3px;
+	-ms-border-radius:3px;
+	-o-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+}
+.valor_campo_subir input::-webkit-input-placeholder{
+	color:#FFFFFF;		
+}
+.valor_campo_subir textarea::-webkit-input-placeholder, .valor_campo_subir2 textarea::-webkit-input-placeholder{
+	color:#FFFFFF;		
+}
+.nombre_campo_subir, .dosPuntos_subir, .valor_campo_subir, .valor_campo_subir2{
+	display:inline-block;
+}
+/*Fin subir documento*/
+
+/*Revisar documento*/
+.visor, .descripcion{
+    display: inline-block;
+}
+.visor{
+    width: 52%; 
+}
+.descripcion{
+    vertical-align: top;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    width: 45%;
+}
+.historial{
+    width: 100%;
+    display: block;
+}
+.visor iframe, .visor embed, .visor img, .descripcion fieldset, .historial fieldset{
+    width: 100%;
+    border:.1rem solid #4D9501;
+}
+.descripcion fieldset label, .historial fieldset label{    
+    /*border:.1rem solid red;*/
+    font-size:1rem;
+    color:#01325D;      
+    display: inline-block;   
+}
+.titulo_descripcion{
+    padding: 5px 0px 5px 5px;
+    font-weight: bold;
+    width: 26%;
+    height: auto;    
+}
+.dosPuntos_descripcion{
+    padding: 5px 0px 5px 0px;
+    width: 2%;
+    height: auto;
+    text-align: center;
+}
+.resultado_descripcion{
+    padding: 5px 0px 5px 0px;
+    width: 69%;
+    height: auto;
+}
+.historial_chico{
+    display: none;
+}
+/*Fin revisar documento*/
+
+/*Enviar correo*/
+.seccion_correo{
+    text-align: center;
+    width: 100%;    
+    display: block;
+}
+.articulo_correo, .formulario_correo, .formulario_correo ul{
+    width: 100%;    
+    display: block;
+}
+.nombre_campo_correo{
+    width: 5%;
+    font-weight: bold;
+    text-align: left;
+    padding: 12px 0 12px 0;       
+}
+.valor_campo_correo{
+    width: 50%;
+    padding: 12px 0 12px 0;    
+}
+.valor_campo_correo2{
+    width: 100%;
+    padding: 12px 0 12px 0;    
+    text-align: center;
+    display: block;    
+}
+.valor_campo_correo input{
+    width: 100%;   
+    padding: 11px 0 11px 0; 
+}
+.valor_campo_correo2 textarea{
+    width: 50%;   
+    margin: 11px 0 11px 70px; 
+}
+.boton_correo{
+    width: 100%;    
+}
+.nombre_campo_correo, .valor_campo_correo{
+    display: inline-block;
+}
+/*Fin enviar correo*/
+
+/*Nuevo destinatario*/
+.seccion_nuevoDestinatario{
+    width: 100%;
+    text-align: center;
+    display: block;        
+}
+.articulo_nuevoDestinatario{
+    width: 100%;
+    text-align: center;
+    display: block;   
+}
+.formulario_nuevoDestinatario{
+    width: 100%;
+    text-align: center;
+	background:rgba(255,255,255,0.50);
+	padding-top:40px;
+    display: block;
+}
+.lista_nuevoDestinatario{
+    width: 100%;
+    text-align: center;
+    display: block;
+}
+.tituloCampo_nuevoDestinatario{
+    width:43%;	
+	color:#01325D;
+	background-color:#4D9501;
+	font-family: "New Cicle Gordita", Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;	
+	text-align:center;
+	padding:15px 0 15px 0;  
+	font-size: 1.3rem;
+}
+.nombreCampo_nuevoDestinatario{
+	font-family: "New Cicle Gordita", Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;	
+    width: 12%;
+    font-weight: bolder;
+    padding: 9px 0 9px 0;
+    text-align: left;
+	font-size:1.2rem;
+}
+.dosPuntos_nuevoDestinatario{
+	font-family: "New Cicle Gordita", Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;	
+    width: 2%;
+	font-weight: bolder;
+    padding: 9px 0 9px 0;
+	font-size:1.2rem;
+    text-align: left;    
+}
+.valor_nuevoDestinatario{
+    width: 28%;    
+    padding: 9px 0 9px 0;
+	font-size:1rem;
+    text-align: left;
+}
+.valor_nuevoDestinatario input{
+	font-family: "New Cicle Gordita", Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;	
+    width: 100%;    
+    padding: 9px 0 9px 0;
+    text-align: left;
+}
+.tituloCampo_nuevoDestinatario, .nombreCampo_nuevoDestinatario, .dosPuntos_nuevoDestinatario, .valor_nuevoDestinatario{
+    display: inline-block;
+} 
+/*Fin nuevo destinatario*/
+
+/*Se comienza la configuración responsive*/
+@media screen and (max-width: 1200px){
+    
+	/*Cabecera cuando baja la resolución*/
+	body{
+		padding-top:145px;
+	}	
+	header{
+		display:block;
+		width:100%;
+		position:fixed;
+		top:0;	
+	}	
+	header img{
+		width:200px;
+	}	
+	.btn-menu{
+		display:inline;
+		color:#FFFFFF;
+		overflow:hidden;
+		font-size:25px;
+		font-weight:bold;
+		text-decoration:none;
+	}	
+	.btn-menu span{
+        float:right;
+	   	font-size:25px;		
+		padding-top:20px;
+		padding-right:20px;
+	}	
+	header nav{
+		width:80%;
+		height:calc(100% - 145px);
+		position:fixed;
+		right:100%;
+		margin:0;
+		overflow:scroll;
+	}	
+	header nav ul li{
+		display:block;
+		border-bottom:1px solid rgba(255,255,255,.5);
+		-webkit-border-radius:0px;	
+		-moz-border-radius:0px;	
+		-ms-border-radius:0px;	
+		-o-border-radius:0px;	
+	}	
+	header nav ul li a{
+		display:block;
+	}	
+	header nav ul li .children{
+		width:100%;
+		position:relative;
+	}
+	
+	header nav ul li:hover .children{
+		display:none;	
+	}
+	
+	header nav ul li .children li a{
+		margin-left:20px;
+	}	
+	
+	/*Estilo del formulario*/
+    .mensaje_aviso{
+        width:100%;	
+   	}
+	.nombre_campo, .dosPuntos{
+		display:none;
+	}
+	.seccion_formulario{
+		width:90%;
+		padding-top: 0px;
+		display:block;	
+	}
+	.formulario{	
+		width:100%;
+		display:block;
+	}
+	.lista_formulario{
+		width:100%;
+		display:block;
+	}
+	.titulo_campo{
+		width:100%;	
+		display:block;
+	}	
+	.valor_campo input::-webkit-input-placeholder{
+		color:#01325D;		
+	}
+	.valor_campo textarea::-webkit-input-placeholder{
+		color:#01325D;		
+	}	
+	.valor_campo, #valor_campo_asociar{	
+		width:100%;
+		padding:6px 0 6px 0;
+		display:block;
+	}
+    .botones{
+        width: 100%;
+        font-size: .6em;
+        text-align: center;         
+    }    
+	.valor_campo input, .valor_campo textarea, .valor_campo select{		
+		width:95%;
+		padding:6px 0px 6px 0px;
+	}	
+	.formulario_botones ul li{
+		width:30%;	
+		margin:0 auto;
+		font-size:.8rem;
+		display:block;
+	}
+	
+	/*SUBIR*/
+	.seccion_subir_documento, .articulo_subir_documento{
+		padding-top: 5px;
+		display:block;
+	}
+	.valor_campo_subir input::-webkit-input-placeholder{
+		color:#01325D;		
+	}
+	.valor_campo_subir textarea::-webkit-input-placeholder{
+		color:#01325D;		
+	}
+	.nombre_campo_subir, .dosPuntos_subir{
+		display:none;
+	}
+	.valor_campo_subir{
+		width:100%;
+		display:block;
+	}
+	.salto_subir{
+		display:none;
+	}
+	.valor_campo_subir, .valor_campo_subir2{	
+		width:100%;	
+	}
+    
+    /*Trabajar documento*/
+    .numeroTrabajar, .documentoTrabajar{
+        display: none;
+    }
+    .br_trabajarDocumento{
+        display: none;
+    }
+    .valor_campo_subir #boton_subirDocumento2{
+        display: inline;  
+    }
+    .valor_campo_subir #boton_subirDocumento{
+        display: none;  
+    }
+    /*Revisar documentos*/
+    .visor, .descripcion{
+        display: block;
+    }
+    .visor{
+        width: 100%; 
+    }
+    .descripcion{
+        vertical-align: top;
+        margin-top: 0rem;
+        margin-left: 0rem;
+        width: 100%;
+    }
+    .titulo_descripcion{
+        width: 13%;
+    }
+    .dosPuntos_descripcion{
+        width: 2%;    
+    }
+    .resultado_descripcion{        
+        width: 83%;    
+    }
+    .br_revisar{
+        display: none;
+    }
+    .historial{
+        display: none;
+    }
+    .historial_chico{
+        display: block;
+    }
+    
+    /*Enviar correo*/
+    .nombre_campo_correo{
+        display: none;       
+    }
+    .valor_campo_correo{
+        width: 70%;        
+    }
+    .valor_campo_correo2 textarea{
+        width: 70%;   
+        margin: 11px 0 11px 0px;
+    }
+    .br_correo{
+        display: none;
+    }
+    /*Fin enviar correo*/
+    
+    /*Nuevo destinatario*/
+    .tituloCampo_nuevoDestinatario{
+        width: 73%;
+    }
+    .nombreCampo_nuevoDestinatario{
+        width: 20%;
+    }
+    .dosPuntos_nuevoDestinatario{
+        width: 2%;        
+    }
+    .valor_nuevoDestinatario{
+        width: 50%;
+    } 
+    .br_nuevoDestinatario{
+        display: none;
+    }
+/*Fin nuevo destinatario*/
+}
+@media screen and (max-width: 1090px){
+    /*Revisar documento*/
+    .titulo_descripcion{
+        width: 20%;                                     
+    }   
+    .dosPuntos_descripcion{
+        width: 2%;    
+    }
+    .resultado_descripcion{        
+        width: 75%;    
+    }
+}
+@media screen and (max-width: 720px){
+    /*Revisar documento*/
+    .titulo_descripcion{
+        width: 30%;    
+    }   
+    .dosPuntos_descripcion{
+        width: 2%;    
+    }
+    .resultado_descripcion{        
+        width: 65%;    
+    }
+}
+@media screen and (max-width: 640px){	
+/*Cabecera cuando baja la resolución*/
+	body{
+		padding-top:145px;
+	}	
+	header{
+		display:block;
+		width:100%;
+		position:fixed;
+		top:0;	
+	}	
+	header img{
+		width:200px;
+	}	
+	.identificador{
+		display:none;		
+	}
+	header nav ul li#cambiar_password{
+		display:inline;
+	}
+	.formulario_botones ul li{
+		width:80%;	
+		font-size:.8rem;
+		margin:0 auto;
+		display:block;
+	}
+    /*Trabajar documento*/
+    .comentarioTrabajar, .fechaTrabajar{
+        display: none;
+    }
+    /*Nuevo destinatarios*/
+    .tituloCampo_nuevoDestinatario{
+        width: 90%;
+    }
+    .nombreCampo_nuevoDestinatario{
+        display: none;        
+    }
+    .dosPuntos_nuevoDestinatario{
+        display: none;        
+    }
+    .valor_nuevoDestinatario{
+        width: 90%;
+    }    
+}

@@ -1,0 +1,314 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+/*CONFIGURACION INICIAL DE LA PÁGINA*/
+body,section,article,footer,header,nav,footer,figure,img,ul,li,a,div,form,label,input,h1,h2,h3,h4,h5,h6, video{
+	padding:0;					/*Eliminación de los margenes internos*/				
+	border:0;					/*Eliminación de los bordes*/
+	margin:0;					/*Eliminación de los margenes externos*/	
+	vertical-align:middle;		/*Alineación vertical mitad*/	
+}
+html,body{
+	height:100%;
+	width:100%;
+}
+/*FIN CONFIGURACION INICIAL DE LA PÁGINA*/
+
+/*FUENTE PAGINA*/
+@font-face{
+	font-family:"New Cicle Fina";								/*Incluir fuente de la página*/
+	src: url(../Fuente/New%20Cicle%20Fina.ttf); 
+}
+@font-face{
+	font-family:"New Cicle Gordita";								/*Incluir fuente de la página*/
+	src: url(../Fuente/New%20Cicle%20Gordita.ttf); 
+}
+@font-face{
+	font-family:"New Cicle Semi";								/*Incluir fuente de la página*/
+	src: url(../Fuente/New%20Cicle%20Semi.ttf); 
+}
+/*FIN FUENTE PAGINA*/
+
+/*ESTILO DEL CUERPO*/
+body, footer{
+	font-family:"New Cicle Semi",Arial, Helvetica, sans-serif;			/*Uso de la fuente de la página*/
+	font-size:16px;														/*Tamaño de la fuente inicial*/	
+	width:100%;															/*Ancho total de la página*/
+	display:block;	
+}
+
+/*ESTILO DE LA CABECERA*/
+header{
+	width:99.7%;															/* Ancho */
+	height:auto;														/* Alto */		
+	font-family:"New Cicle Gordita",Arial, Helvetica, sans-serif;		/* Fuente */
+	background-color:#01325D;											/* Color de fondo */
+	overflow:hidden;													/* Controla el contenido que no entra en el header */	
+	display:inline-block;
+}
+
+/* ESTILO MENU SUPERIOR  - ESTILO IMAGENES - ESTILO DEL USUARIO*/
+header #logo{
+	border:0.125rem solid #4D9501;		/* Borde de la imagen */							
+	margin:1rem 1rem 1rem 1rem;			/* Margen de la imagen */
+	width:15%;							/*Ancho de la imagen */
+}
+header #logo, #menu-cabecera{
+	display: inline-block;				/* Tipo de caja, uno al lado del otro si entra */	
+}
+header #menu-cabecera{
+	width:79%;							/* Tamaño del menu cabecera, para el nav */
+	text-align:left;					/* Alineación del texto a la izquierda */
+	list-style:none;					/* Elimina los circulos de la lista */
+	margin-right:1rem;					/* Margen izquierdo */	
+	color:#FFFFFF;						/* Color blanco */
+}
+header #menu-cabecera ul{
+	text-align:right;					/* Alineación del texto de la lista dentro del nav */
+}
+header #menu-cabecera li{
+	display:inline-block;				/* Alinea la lista */
+	text-align:left;					/* El contenido de la lista a la izquierda */
+	vertical-align:middle;				/* Posición del contenido al medio */	
+}
+header #menu-cabecera .webSite, #menu-cabecera .telefono, #menu-cabecera .webMail, #menu-cabecera .ayuda{	
+	background:url(../Imagenes/dashboard-icons-dark.png) no-repeat;		/* Imagen de fondo para los menú */
+	display:block;														/* Tipo de caja bloqueado */		
+}
+header #menu-cabecera .webSite{
+	width:2.5rem;							/* Ancho de la imagen anterior */
+	height:2.5rem;							/* Alto de la imagen anterior */
+	background-position:-47.5rem -2.5rem;	/* Posición en la imagen anterior  */
+	margin-left:0;							/* Margen izquierdo */		
+	border:0;								/* Sin borde */
+}
+header #menu-cabecera .ayuda{
+	width:2.5rem;							/* Ancho de la imagen anterior */
+	height:2.5rem;							/* Alto de la imagen anterior */
+	background-position:-15rem -25rem;		/* Posición en la imagen anterior  */
+	margin-left:0;							/* Margen izquierdo */		
+	border:0;								/* Sin borde */
+}
+header #menu-cabecera .webMail{
+	width:2.5rem;							/* Ancho de la imagen anterior */
+	height:2.5rem;							/* Alto de la imagen anterior */
+	background-position:-52.5rem 0rem;		/* Posición en la imagen anterior  */
+	margin-left:0;							/* Margen izquierdo */		
+	border:0;								/* Sin borde */
+}
+header #menu-cabecera .telefono{
+	width:2.5rem;							/* Ancho de la imagen anterior */
+	height:2.5rem;							/* Alto de la imagen anterior */
+	background-position:-10rem -22.5rem;	/* Posición en la imagen anterior  */
+	margin-left:0;							/* Margen izquierdo */		
+	border:0;								/* Sin borde */
+	pointer-events:none;					/* Sin acción al pasar el mouse por el enlace */					
+	cursor:default; 						/* No cambia el puentero al pasar el mouse */	
+	display:block;							/*  */
+}
+/* FIN ESTILO MENU SUPERIOR  - FIN ESTILO IMAGENES - FIN ESTILO DEL USUARIO*/
+
+/* ESTILO DEL SECTION */
+section{
+	width:100%;															/* Ocupe toda la pantalla a lo ancho */
+	height:auto;														/* El alto se adapta */
+	font-family:"New Cicle Gordita",Arial, Helvetica, sans-serif;		/* Fuente de la página */
+	margin:0 auto;														/* Trata de centrar */
+	/*overflow:hidden;													/* Oculta el contenido si se sale de la seccion */
+	/*position:relative;													/* Posiciona el section, */
+	display:block;														/*La caja siguie abajo en una linea nueva*/
+}
+/* ESTILO DEL FOOTER */
+footer{
+	color:#01325D;			/* Color del texto */	
+	display:block;			/* Bloquea la caja a la siguiente linea */
+	font-weight:bolder;		/* En negrita en texto */
+}
+
+/* PAGINA LOGIN.HTML */
+section #formulario_ingreso{
+	margin:3rem auto;			/* Centra el formulario y le da un margen superir de 3rem */
+	color:#01325D;				/* Color del texto */
+	text-align:center;			/* Alineacion centra del texto */
+	width:60%;					/* Ancho de 50% */
+	display:block;				/* BLoquea el formulario para que nada se coloque al lado */
+}
+section #formulario_ingreso ul{
+	list-style:none;				/* Elimina los adornos de la lista */
+}
+section #formulario_ingreso ul li{
+	text-align:left;				/* Alinea el texto del contenido de la lista */	
+	display:inline-block;			/* Alinea los <li> */
+}
+section #formulario_ingreso ul li.titulo_campo{	
+	width:70%;						/* Tamaño del titulo */ 
+	background-color:#4D9501;		/* Color fondo de titulo */
+	color:#01325D;					/* Color del texto  */	
+	text-align:center; 				/* Centra el texto */
+	font-weight:bolder;				/* Negrita */
+	padding:1rem;					/* Margen interno */	
+}
+section #formulario_ingreso ul li.nombre_campo{	
+	padding:.5rem;	/* Margen interno */		
+	width:28%;		/* Ancho del li */
+}
+
+section #formulario_ingreso ul li.valor_campo{	
+	padding:.5rem;	/* Margen interno */	
+	width:40%;		/* Ancho del li  */
+}
+section #formulario_ingreso ul li.valor_campo input{
+	width:90%;						/* Ancho del input */
+	border:.1rem solid #01325D;		/* Borde del input */ 	
+	padding:.5rem;					/* Margen interno del input */		
+	color:#01325D;					/* Color del texto en el input */
+}
+/* FIN ESTILO PAGINA LOGIN.HTML */
+
+/* ADORNOS */
+/*ICONOS PARA FORMULARIO*/
+::-webkit-input-placeholder{	
+	color:#01325D;
+}
+:-ms-input-placeholder{
+	color:#01325D;
+}
+:-o-input-placeholder{
+	color:#01325D;
+}
+:-moz-input-placeholder{
+	color:#01325D;
+}	
+section form input:required{
+	background:#FFF url(../imagenes/Fondo-Logo/green_asterisk.png) no-repeat 98% center;
+}
+section form input:required:valid{
+	background:#FFF url(../imagenes/Fondo-Logo/valid.png) no-repeat 98% center;
+	box-shadow:0 0 0.3125rem #006600;		
+}
+section form input:focus:invalid{
+	background:#FFF url(../imagenes/Fondo-Logo/invalid.png) no-repeat 98% center;
+	box-shadow:0 0 0.3125rem #900;
+}
+::-webkit-select-placeholder{	
+	color:#01325D;
+}
+:-ms-select-placeholder{
+	color:#01325D;
+}
+:-o-select-placeholder{
+	color:#01325D;
+}
+:-moz-select-placeholder{
+	color:#01325D;
+}	
+::-webkit-textarea-placeholder{	
+	color:#01325D;
+}
+:-ms-textarea-placeholder{
+	color:#01325D;
+}
+:-o-textarea-placeholder{
+	color:#01325D;
+}
+:-moz-textarea-placeholder{
+	color:#01325D;
+}	
+section form select:required{
+	background:#FFF url(../imagenes/Fondo-Logo/green_asterisk.png) no-repeat 98% center;
+}
+section form select:required:valid{
+	background:#FFF url(../imagenes/Fondo-Logo/valid.png) no-repeat 98% center;
+	box-shadow:0 0 0.3125rem #006600;		
+}
+section form select:focus:invalid{
+	background:#FFF url(../imagenes/Fondo-Logo/invalid.png) no-repeat 98% center;
+	box-shadow:0 0 0.3125rem #900;
+}
+section form textarea:required{
+	background:#FFF url(../imagenes/Fondo-Logo/green_asterisk.png) no-repeat 98% center;
+}
+section form textarea:required:valid{
+	background:#FFF url(../imagenes/Fondo-Logo/valid.png) no-repeat 98% center;
+	box-shadow:0 0 0.3125rem #006600;		
+}
+section form textarea:focus:invalid{
+	background:#FFF url(../imagenes/Fondo-Logo/invalid.png) no-repeat 98% center;
+	box-shadow:0 0 0.3125rem #900;
+}
+/* FIN ESTILO ADORNO */
+
+/* BOTONES*/
+#boton{
+	color:#4D9501;							/* Color del texto del boton */
+	font-weight:bolder;						/* Negrita del texto */
+	padding:1rem 3rem 1rem 3rem;			/* Borde interno del boton */
+				
+	background:#01325D;				/* Color de fondo */
+	background: -webkit-linear-gradient(top, #01325D, #000000);
+	background: -moz-linear-gradient(top, #01325D, #000000);
+	background: -o-linear-gradient(top, #01325D, #000000);
+	background: linear-gradient(top, #01325D, #000000);
+		
+	border: .1rem outset #4D9501;
+	-webkit-border-radius:.7rem;
+	-moz-border-radius:.7rem;
+	-o-border-radius:.7rem;
+	border-radius:.7rem;
+	cursor:pointer;							/* Forma del punter al posicionarse */
+		
+	transition-duration:1s;					/* animacion */			
+	display:block;							/* Bloque el boton para la siguiente linea */	
+}
+#boton:hover{
+	color:#000000;							/* Color del texto del boton */
+	font-weight:bolder;						/* Negrita del texto */
+	padding:1rem 3rem 1rem 3rem;			/* Borde interno del boton */
+			
+	background:#4D9501;				/* Color de fondo */
+	background: -webkit-linear-gradient(top, #4D9501, #000000);
+	background: -moz-linear-gradient(top, #4D9501, #000000);
+	background: -o-linear-gradient(top, #4D9501, #000000);
+	background: linear-gradient(top, #4D9501, #000000);
+	
+	border: .1rem outset #4D9501;
+	-webkit-border-radius:.7rem;
+	-moz-border-radius:.7rem;
+	-o-border-radius:.7rem;
+	cursor:pointer;							/* Forma del punter al posicionarse */
+		
+	display:block;							/* Bloque el boton para la siguiente linea */	
+}
+
+#mensaje_aviso2 a{
+	color: #01325D;
+	text-decoration:none;
+	vertical-align:text-top;
+	font-weight:bold;
+}
+#mensaje_aviso2{			
+	float:left;
+	margin:0rem 18% 2rem 18%;	
+	width:60%;
+	color:#01325D;
+	text-align:center;
+	font-weight:bolder;
+	padding:1rem 1rem 1rem 1rem;
+	text-transform:uppercase;		
+	border: .1rem outset #79BFFD;
+	-webkit-border-radius:.7rem;
+	-moz-border-radius:.7rem;
+	-o-border-radius:.7rem;
+	border-radius:.7rem;
+	
+	background: #79BFFD;				
+	background: -webkit-linear-gradient(top, #79BFFD, #014582);
+	background: -moz-linear-gradient(top, #79BFFD, #014582);
+	background: -o-linear-gradient(top, #79BFFD, #014582);
+	background: linear-gradient(top, #79BFFD, #014582);
+	
+	-webkit-box-shadow:rgba(0,0,0,.55) 0 1px 6px;
+	-moz-box-shadow:rgba(0,0,0,.55) 0 1px 6px;
+	-o-box-shadow:rgba(0,0,0,.55) 0 1px 6px;
+	box-shadow:rgba(0,0,0,.55) 0 1px 6px;
+}

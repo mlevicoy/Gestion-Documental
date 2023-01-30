@@ -1,0 +1,576 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*Formateo básico*/
+*{
+	padding:0;
+	margin:0;
+	-webkit-box-sizing: border-box;	/*Los elementos anteriores no incrementan su ancho*/
+	-moz-box-sizing: border-box;
+	-box-sizing: border-box;
+}
+/*Agregamos la fuente*/
+@font-face{
+	font-family: "New Cicle Fina";
+	src:url(../../interfaz/Fuente/New%20Cicle%20Fina.ttf);
+}
+@font-face{
+	font-family: "New Cicle Gordita";
+	src:url(../../interfaz/Fuente/New%20Cicle%20Gordita.ttf);
+}
+/*Estilo del cuerpo*/
+body{
+	font-family: "New Cicle Fina", Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;	
+	font-size:1em;
+	background:#FEFEFE;
+}
+header{	
+	width:100%;
+	background:#01325D;
+}
+header img{
+	height:auto;
+	width:250px;	
+	max-width:100%;	
+	padding:20px 0px 20px 20px;
+}
+.btn-menu, .btn-menu_sistema{
+	display:none;
+}
+.identificador, .identificador_sistema{	
+	font-family: "New Cicle Gordita", Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;	
+	color:#FFFFFF;
+	width:50%;	
+	text-align:right;
+	padding:20px 20px 0px 0px;
+	list-style:none;
+	overflow:hidden;
+	float:right;	
+}
+.identificador li, .identificador_sistema li {
+	padding-bottom:5px;
+}
+.identificador li a, .identificador_sistema li a{
+	color:#FFFFFF;
+}
+header nav#menues_sistema{
+	display:none;
+}
+
+/*Comiezo estilo del menu*/
+header nav{
+	font-family: "New Cicle Gordita", Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;	
+	background:#01325D;
+	z-index:1000;	/*Para que el menu quede siempre sobre todos los elementos, si hay problema puede aumentar el valor*/
+	max-width: 5000px;	/*Ancho maximo*/
+	width:100%;	/*Al achicar abarca solo el 95%*/
+	text-align:center;	
+/*	overflow:hidden;
+	float:right;	*/
+}
+header nav ul{
+	list-style:none;
+}
+header nav ul li{
+	display:inline-block;	/*No se usa float por que hay menu desplagable*/
+	position:relative;	/*Para los menus*/	
+	-webkit-transition:all 1s ease-out;
+	-moz-transition:all 1s ease-out;
+	-ms-transition:all 1s ease-out;
+	-o-transition:all 1s ease-out;	
+}
+header nav ul li:hover{	
+	background:#003768;
+}
+header nav ul li#cambiar_password{
+	display:none;
+}
+header nav ul li a{
+	color:#FFFFFF;
+	display:block;
+	text-decoration:none;
+	padding:18px;
+}
+header nav ul li a:hover{
+	color:#4D9501;
+}
+header nav ul li a span{
+	margin-right:10px;
+}
+
+/*Estilo de los submenu*/
+header nav ul li:hover .children{
+	display:block;
+}
+header nav ul li .children{
+	display:none;
+	background:#01325D;
+	position:absolute;	/*Los elementos padres deben ser position relative y los elementos hijos absolute*/
+	width:162%;	/*Para que sea mayor al padre*/
+	z-index:1000;	/*Para no tener problemas con los elementos*/
+}
+
+header nav ul li .children li{
+	display:block;
+	overflow:hidden;	/*Para resolver los problemas que trae el float*/
+	border-bottom:1px solid rgba(255,255,255,.5);
+}
+
+header nav ul li .children li a{
+	display:block;	/*Para abarcar el 100%*/
+}
+
+header nav ul li .children li a span{
+	float:right;
+	position:relative;
+	top:3px;
+	margin-right:0;
+	margin-left:10px;
+}
+/*ESTILO DEL FORMULARIO*/
+.mensaje_aviso{
+	font-family: "New Cicle Gordita", Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;		
+	width:50%;	
+	text-align:center;	
+	padding:10px 0 10px 0;
+	margin:0 auto;	
+	color:#FF0004;
+}
+.mensaje_aviso a{
+	text-decoration:none;
+	color:#FF0004;
+}
+.seccion_formulario{
+	width:50%;
+	margin:0 auto;
+	padding-top: 30px;
+	display:block;
+}
+.formulario{	
+	width:100%;
+}
+.lista_formulario{
+	width:100%;
+	list-style:none;	
+	text-align:center;
+}
+.titulo_campo{
+	width:100%;	
+	color:#01325D;
+	background-color:#4D9501;
+	font-family: "New Cicle Gordita", Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;	
+	text-align:center;
+	padding:15px 0 15px 0;
+
+}
+.nombre_campo{
+	font-family: "New Cicle Gordita", Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;	
+	color:color:#01325D;
+	width:200px;
+	padding:5px 0 15px 0;
+	text-align:left;
+}
+.dosPuntos{
+	font-family: "New Cicle Gordita", Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;	
+	color:color:#01325D;
+	width:20px;
+	padding:5px 0 15px 0;
+	text-align:center;
+}
+.valor_campo{
+	color:color:#01325D;
+	width:330px;
+	padding:6px 0 16px 0;
+	text-align:center;		
+}
+.valor_campo *{
+	width:100%;
+	padding:5px 0 5px 0;
+}
+#valor_campo_asociar{
+	width:70%;
+}
+.valor_campo input, .valor_campo textarea, .valor_campo select{
+	font-family: "New Cicle Gordita", Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;	
+	width:100%;
+	padding:5px 0px 5px 0px;
+	border:1.5px solid #024987;
+	-moz-border-radius:3px;
+	-ms-border-radius:3px;
+	-o-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+}
+.valor_campo input::-webkit-input-placeholder{
+	color:#FFFFFF;		
+}
+.valor_campo textarea::-webkit-input-placeholder{
+	color:#FFFFFF;		
+}
+.nombre_campo, .dosPuntos, .valor_campo{
+	display:inline-block;
+}
+.boton{
+	color:#4D9501;							/* Color del texto del boton */
+	font-size:1em;
+	font-weight:bolder;						/* Negrita del texto */
+	padding:.5rem 1rem .5rem 1rem;			/* Borde interno del boton */	
+				
+	background:#01325D;				/* Color de fondo */
+	background: -webkit-linear-gradient(top, #01325D, #000000);
+	background: -moz-linear-gradient(top, #01325D, #000000);
+	background: -o-linear-gradient(top, #01325D, #000000);
+	background: linear-gradient(top, #01325D, #000000);
+		
+	border: .1rem outset #4D9501;
+	-webkit-border-radius:.7rem;
+	-moz-border-radius:.7rem;
+	-o-border-radius:.7rem;
+	border-radius:.7rem;
+	cursor:pointer;							/* Forma del punter al posicionarse */		
+	transition-duration:1s;					/* animacion */				
+}
+.boton:hover{
+	color:#01325D;							/* Color del texto del boton */
+	font-size:1em;
+	font-weight:bolder;						/* Negrita del texto */
+	padding:.5rem 1rem .5rem 1rem;			/* Borde interno del boton */	
+				
+	background:#4D9501;				/* Color de fondo */
+	background: -webkit-linear-gradient(top, #4D9501, #000000);
+	background: -moz-linear-gradient(top, #4D9501, #000000);
+	background: -o-linear-gradient(top, #4D9501, #000000);
+	background: linear-gradient(top, #4D9501, #000000);
+		
+	border: .1rem outset #4D9501;
+	-webkit-border-radius:.7rem;
+	-moz-border-radius:.7rem;
+	-o-border-radius:.7rem;
+	border-radius:.7rem;
+	cursor:pointer;							/* Forma del punter al posicionarse */		
+	transition-duration:1s;					/* animacion */			
+}
+
+/*Botones sistema*/
+.botones_sistema, .formulario_botones{
+	width:100%;
+	text-align:center;	
+	display:block;
+}
+.formulario_botones{
+	margin-top:10%;;
+}
+.formulario_botones ul{
+	width:100%;
+	list-style:none;
+}
+.formulario_botones ul li{
+	width:20%;	
+	display:inline-block;
+}
+/*.identificador_fono{
+		display:none;		
+	}*/
+
+/*Subir documento*/
+.seccion_subir_documento, .articulo_subir_documento{
+	width:95%;
+	margin:0 auto;
+	padding-top: 20px;
+	display:block;
+}
+.lista_formulario_subir{
+	width:100%;
+	list-style:none;	
+	text-align:left;
+}
+.titulo_campo{
+	width:100%;	
+	color:#01325D;
+	background-color:#4D9501;
+	font-family: "New Cicle Gordita", Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;	
+	text-align:center;
+	padding:15px 0 15px 0;
+
+}
+.nombre_campo_subir{
+	font-family: "New Cicle Gordita", Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;	
+	color:color:#01325D;
+	width:12%;
+	padding:25px 0 27px 50px;		
+	text-align:left;
+}
+.dosPuntos_subir{
+	font-family: "New Cicle Gordita", Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;	
+	color:color:#01325D;
+	width:3%;
+	padding:25px 0 27px 0;
+	text-align:center;
+}
+.lista_formulario_subir fieldset{
+	width:100%;
+}
+.valor_campo_subir{
+	color:color:#01325D;
+	width:30%;
+	padding-right:20px;		
+	text-align:left;		
+}
+.valor_campo_subir2{
+	color:color:#01325D;
+	width:75.9%;
+	padding-right:20px;		
+	text-align:left;		
+}
+.valor_campo_subir input, .valor_campo_subir textarea, .valor_campo_subir select{
+	font-family: "New Cicle Gordita", Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;	
+	width:100%;
+	margin:20px 0 20px 10px;
+	padding:5px 0px 5px 0px;
+	border:1.5px solid #024987;
+	-moz-border-radius:3px;
+	-ms-border-radius:3px;
+	-o-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+}
+.valor_campo_subir2 textarea{
+	font-family: "New Cicle Gordita", Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;	
+	width:100%;
+	margin:20px 0 20px 10px;
+	padding:5px 0px 5px 0px;
+	border:1.5px solid #024987;
+	-moz-border-radius:3px;
+	-ms-border-radius:3px;
+	-o-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+}
+.valor_campo_subir input::-webkit-input-placeholder{
+	color:#FFFFFF;		
+}
+.valor_campo_subir textarea::-webkit-input-placeholder, .valor_campo_subir2 textarea::-webkit-input-placeholder{
+	color:#FFFFFF;		
+}
+.nombre_campo_subir, .dosPuntos_subir, .valor_campo_subir, .valor_campo_subir2{
+	display:inline-block;
+}
+/*Fin subir documento*/
+
+/*Se comienza la configuración responsive*/
+@media screen and (max-width: 1200px){
+	
+	/*Cabecera cuando baja la resolución*/
+	body{
+		padding-top:145px;
+	}	
+	header{
+		display:block;
+		width:100%;
+		position:fixed;
+		top:0;	
+	}	
+	header img{
+		width:200px;
+	}	
+	.btn-menu{
+		display:inline;
+		color:#FFFFFF;
+		overflow:hidden;
+		font-size:25px;
+		font-weight:bold;
+		text-decoration:none;
+	}	
+	.btn-menu span{
+		float:right;
+		font-size:25px;		
+		padding-top:20px;
+		padding-right:20px;
+	}	
+	header nav{
+		width:80%;
+		height:calc(100% - 145px);
+		position:fixed;
+		right:100%;
+		margin:0;
+		overflow:scroll;
+	}	
+	header nav ul li{
+		display:block;
+		border-bottom:1px solid rgba(255,255,255,.5);
+		-webkit-border-radius:0px;	
+		-moz-border-radius:0px;	
+		-ms-border-radius:0px;	
+		-o-border-radius:0px;	
+	}	
+	header nav ul li a{
+		display:block;
+	}	
+	header nav ul li .children{
+		width:100%;
+		position:relative;
+	}
+	
+	header nav ul li:hover .children{
+		display:none;	
+	}
+	
+	header nav ul li .children li a{
+		margin-left:20px;
+	}	
+	
+	/*Estilo del formulario*/
+    .mensaje_aviso{
+        width:100%;	
+   	}
+	.nombre_campo, .dosPuntos{
+		display:none;
+	}
+	.seccion_formulario{
+		width:90%;
+		padding-top: 0px;
+		display:block;	
+	}
+	.formulario{	
+		width:100%;
+		display:block;
+	}
+	.lista_formulario{
+		width:100%;
+		display:block;
+	}
+	.titulo_campo{
+		width:100%;	
+		display:block;
+	}	
+	.valor_campo input::-webkit-input-placeholder{
+		color:#01325D;		
+	}
+	.valor_campo textarea::-webkit-input-placeholder{
+		color:#01325D;		
+	}	
+	.valor_campo, #valor_campo_asociar{	
+		width:100%;
+		padding:6px 0 6px 0;
+		display:block;
+	}
+    .botones{
+        width: 100%;
+        font-size: .6em;
+        text-align: center;         
+    }    
+	.valor_campo input, .valor_campo textarea, .valor_campo select{		
+		width:95%;
+		padding:6px 0px 6px 0px;
+	}	
+	.formulario_botones ul li{
+		width:30%;	
+		margin:0 auto;
+		font-size:.8rem;
+		display:block;
+	}
+	
+	/*SUBIR*/
+	.seccion_subir_documento, .articulo_subir_documento{
+		padding-top: 5px;
+		display:block;
+	}
+	.valor_campo_subir input::-webkit-input-placeholder{
+		color:#01325D;		
+	}
+	.valor_campo_subir textarea::-webkit-input-placeholder{
+		color:#01325D;		
+	}
+	.nombre_campo_subir, .dosPuntos_subir{
+		display:none;
+	}
+	.valor_campo_subir{
+		width:100%;
+		display:block;
+	}
+	.salto_subir{
+		display:none;
+	}
+	.valor_campo_subir, .valor_campo_subir2{	
+		width:100%;	
+	}
+}
+@media screen and (max-width: 640px){	
+/*Cabecera cuando baja la resolución*/
+	body{
+		padding-top:145px;
+	}	
+	header{
+		display:block;
+		width:100%;
+		position:fixed;
+		top:0;	
+	}	
+	header img{
+		width:200px;
+	}	
+	/*Cabecera cuando baja la resolución*/
+	.btn-menu_sistema{
+		display:inline;
+		color:#FFFFFF;
+		overflow:hidden;
+		font-size:25px;
+		font-weight:bold;
+		text-decoration:none;
+	}	
+	.btn-menu_sistema span{
+		float:right;
+		font-size:25px;		
+		padding-top:20px;
+		padding-right:20px;
+	}	
+	header nav#menues_sistema{
+		display:inline;
+	}
+	header nav#menues_sistema{
+		width:80%;
+		height:calc(100% - 145px);
+		position:fixed;
+		right:100%;
+		margin:0;
+		overflow:scroll;
+	}	
+	header nav#menues_sistema ul li{
+		display:block;
+		border-bottom:1px solid rgba(255,255,255,.5);
+		-webkit-border-radius:0px;	
+		-moz-border-radius:0px;	
+		-ms-border-radius:0px;	
+		-o-border-radius:0px;	
+	}	
+	header nav#menues_sistema ul li a{
+		display:block;
+	}	
+	header nav#menues_sistema ul li .children{
+		width:100%;
+		position:relative;
+	}
+	
+	header nav#menues_sistema ul li:hover .children{
+		display:none;	
+	}
+	
+	header nav#menues_sistema ul li .children li a{
+		margin-left:20px;
+	}	
+	.identificador, .identificador_sistema{
+		display:none;		
+	}
+	/*.identificador_fono{
+		display:block;		
+	}*/
+	header nav ul li#cambiar_password, header nav#menues_sistema ul li#cambiar_password{
+		display:inline;
+	}
+	.formulario_botones ul li{
+		width:80%;	
+		font-size:.8rem;
+		margin:0 auto;
+		display:block;
+	}
+}

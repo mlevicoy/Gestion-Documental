@@ -1,0 +1,1092 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+/*CONFIGURACION INICIAL DE LA PÁGINA*/
+body,section,article,footer,header,nav,footer,figure,img,ul,li,a,div,form,label,input,h1,h2,h3,h4,h5,h6{
+	padding:0;					/*Eliminación de los margenes internos*/				
+	border:0;					/*Eliminación de los bordes*/
+	margin:0;					/*Eliminación de los margenes externos*/	
+	vertical-align:middle;		/*Alineación vertical mitad*/	
+}
+html,body{
+	height:100%;
+	width:100%;
+}
+/*FIN CONFIGURACION INICIAL DE LA PÁGINA*/
+
+/*FUENTE PAGINA*/
+@font-face{
+	font-family:"New Cicle Fina";								/*Incluir fuente de la página*/
+	src: url(../Fuente/New%20Cicle%20Fina.ttf); 
+}
+@font-face{
+	font-family:"New Cicle Gordita";								/*Incluir fuente de la página*/
+	src: url(../Fuente/New%20Cicle%20Gordita.ttf); 
+}
+@font-face{
+	font-family:"New Cicle Semi";								/*Incluir fuente de la página*/
+	src: url(../Fuente/New%20Cicle%20Semi.ttf); 
+}
+/*FIN FUENTE PAGINA*/
+
+/*ESTILO DEL CUERPO*/
+body, footer{
+	font-family:"New Cicle Semi",Arial, Helvetica, sans-serif;			/*Uso de la fuente de la página*/
+	font-size:16px;														/*Tamaño de la fuente inicial*/	
+	width:100%;															/*Ancho total de la página*/
+	display:block;
+}
+
+/*ESTILO DE LA CABECERA*/
+header{
+	width:100%;															/* Ancho */
+	height:auto;														/* Alto */		
+	font-family:"New Cicle Gordita",Arial, Helvetica, sans-serif;		/* Fuente */
+	/*border-bottom:.15rem solid #4D9501;									/* Borde inferior */
+	background-color:#01325D;											/* Color de fondo */
+	overflow:hidden;													/* Controla el contenido que no entra en el header */
+	display:block;														/* Tipo de caja, block bloqueado, comienza en una nueva linea */
+}
+
+/* ESTILO MENU SUPERIOR  - ESTILO IMAGENES - ESTILO DEL USUARIO*/
+header #logo{
+	border:0.125rem solid #4D9501;		/* Borde de la imagen */							
+	margin:1rem 1rem 1rem 1rem;			/* Margen de la imagen */
+	width:16%;							/*Ancho de la imagen */
+}
+header #logo, #datos_usuario{
+	display:inline-block;				/* Tipo de caja, uno al lado del otro si entra */	
+}
+header #logo, #menu-cabecera{
+	display:inline-block;				/* Tipo de caja, uno al lado del otro si entra */	
+}
+header #menu-cabecera{
+	width:79%;							/* Tamaño del menu cabecera, para el nav */
+	text-align:left;					/* Alineación del texto a la izquierda */
+	list-style:none;					/* Elimina los circulos de la lista */
+	margin-right:1rem;					/* Margen izquierdo */	
+	color:#FFFFFF;						/* Color blanco */
+}
+header #menu-cabecera ul{
+	text-align:right;					/* Alineación del texto de la lista dentro del nav */
+}
+header #menu-cabecera li{
+	display:inline-block;				/* Alinea la lista */
+	text-align:left;					/* El contenido de la lista a la izquierda */
+	vertical-align:middle;				/* Posición del contenido al medio */	
+}
+header #menu-cabecera .webSite, #menu-cabecera .telefono, #menu-cabecera .webMail, #menu-cabecera .ayuda{	
+	background:url(../Imagenes/dashboard-icons-dark.png) no-repeat;		/* Imagen de fondo para los menú */
+	display:block;														/* Tipo de caja bloqueado */		
+}
+header #menu-cabecera .webSite{
+	width:2.5rem;							/* Ancho de la imagen anterior */
+	height:2.5rem;							/* Alto de la imagen anterior */
+	background-position:-47.5rem -2.5rem;	/* Posición en la imagen anterior  */
+	margin-left:0;							/* Margen izquierdo */		
+	border:0;								/* Sin borde */
+}
+header #menu-cabecera .ayuda{
+	width:2.5rem;							/* Ancho de la imagen anterior */
+	height:2.5rem;							/* Alto de la imagen anterior */
+	background-position:-15rem -25rem;		/* Posición en la imagen anterior  */
+	margin-left:0;							/* Margen izquierdo */		
+	border:0;								/* Sin borde */
+}
+header #menu-cabecera .webMail{
+	width:2.5rem;							/* Ancho de la imagen anterior */
+	height:2.5rem;							/* Alto de la imagen anterior */
+	background-position:-52.5rem 0rem;		/* Posición en la imagen anterior  */
+	margin-left:0;							/* Margen izquierdo */		
+	border:0;								/* Sin borde */
+}
+header #menu-cabecera .telefono{
+	width:2.5rem;							/* Ancho de la imagen anterior */
+	height:2.5rem;							/* Alto de la imagen anterior */
+	background-position:-10rem -22.5rem;	/* Posición en la imagen anterior  */
+	margin-left:0;							/* Margen izquierdo */		
+	border:0;								/* Sin borde */
+	pointer-events:none;					/* Sin acción al pasar el mouse por el enlace */					
+	cursor:default; 						/* No cambia el puentero al pasar el mouse */	
+/*	display:block;							/*  */
+}
+/* FIN ESTILO MENU SUPERIOR  - FIN ESTILO IMAGENES - FIN ESTILO DEL USUARIO*/
+
+/* ESTILO DEL SECTION */
+section{
+	width:100%;															/* Ocupe toda la pantalla a lo ancho */
+	height:auto;														/* El alto se adapta */
+	font-family:"New Cicle Gordita",Arial, Helvetica, sans-serif;		/* Fuente de la página */
+	margin:0 auto;														/* Trata de centrar */
+	/*overflow:hidden;													/* Oculta el contenido si se sale de la seccion */
+	/*position:relative;													/* Posiciona el section, */
+	display:block;														/*La caja siguie abajo en una linea nueva*/
+}
+/* ESTILO DEL FOOTER */
+footer{
+	color:#01325D;			/* Color del texto */	
+	display:block;			/* Bloquea la caja a la siguiente linea */
+	font-weight:bolder;		/* En negrita en texto */
+}
+
+/* ADORNOS */
+/*ICONOS PARA FORMULARIO*/
+::-webkit-input-placeholder{	
+	color:#01325D;
+}
+:-ms-input-placeholder{
+	color:#01325D;
+}
+:-o-input-placeholder{
+	color:#01325D;
+}
+:-moz-input-placeholder{
+	color:#01325D;
+}	
+section form input:required{
+	background:#FFF url(../imagenes/Fondo-Logo/green_asterisk.png) no-repeat 98% center;
+}
+section form input:required:valid{
+	background:#FFF url(../imagenes/Fondo-Logo/valid.png) no-repeat 98% center;
+	box-shadow:0 0 0.3125rem #006600;		
+}
+section form input:focus:invalid{
+	background:#FFF url(../imagenes/Fondo-Logo/invalid.png) no-repeat 98% center;
+	box-shadow:0 0 0.3125rem #900;
+}
+::-webkit-select-placeholder{	
+	color:#01325D;
+}
+:-ms-select-placeholder{
+	color:#01325D;
+}
+:-o-select-placeholder{
+	color:#01325D;
+}
+:-moz-select-placeholder{
+	color:#01325D;
+}	
+::-webkit-textarea-placeholder{	
+	color:#01325D;
+}
+:-ms-textarea-placeholder{
+	color:#01325D;
+}
+:-o-textarea-placeholder{
+	color:#01325D;
+}
+:-moz-textarea-placeholder{
+	color:#01325D;
+}	
+section form select:required{
+	background:#FFF url(../imagenes/Fondo-Logo/green_asterisk.png) no-repeat 98% center;
+}
+section form select:required:valid{
+	background:#FFF url(../imagenes/Fondo-Logo/valid.png) no-repeat 98% center;
+	box-shadow:0 0 0.3125rem #006600;		
+}
+section form select:focus:invalid{
+	background:#FFF url(../imagenes/Fondo-Logo/invalid.png) no-repeat 98% center;
+	box-shadow:0 0 0.3125rem #900;
+}
+section form textarea:required{
+	background:#FFF url(../imagenes/Fondo-Logo/green_asterisk.png) no-repeat 98% center;
+}
+section form textarea:required:valid{
+	background:#FFF url(../imagenes/Fondo-Logo/valid.png) no-repeat 98% center;
+	box-shadow:0 0 0.3125rem #006600;		
+}
+section form textarea:focus:invalid{
+	background:#FFF url(../imagenes/Fondo-Logo/invalid.png) no-repeat 98% center;
+	box-shadow:0 0 0.3125rem #900;
+}
+/* FIN ESTILO ADORNO */
+
+/* BOTONES*/
+#boton{
+	color:#4D9501;							/* Color del texto del boton */
+	font-weight:bolder;						/* Negrita del texto */
+	padding:1rem 3rem 1rem 3rem;			/* Borde interno del boton */
+				
+	background:#01325D;				/* Color de fondo */
+	background: -webkit-linear-gradient(top, #01325D, #000000);
+	background: -moz-linear-gradient(top, #01325D, #000000);
+	background: -o-linear-gradient(top, #01325D, #000000);
+	background: linear-gradient(top, #01325D, #000000);
+		
+	border: .1rem outset #4D9501;
+	-webkit-border-radius:.7rem;
+	-moz-border-radius:.7rem;
+	-o-border-radius:.7rem;
+	border-radius:.7rem;
+	cursor:pointer;							/* Forma del punter al posicionarse */
+		
+	transition-duration:1s;					/* animacion */			
+	display:block;							/* Bloque el boton para la siguiente linea */	
+}
+#boton:hover{
+	color:#000000;							/* Color del texto del boton */
+	font-weight:bolder;						/* Negrita del texto */
+	padding:1rem 3rem 1rem 3rem;			/* Borde interno del boton */
+			
+	background:#4D9501;				/* Color de fondo */
+	background: -webkit-linear-gradient(top, #4D9501, #000000);
+	background: -moz-linear-gradient(top, #4D9501, #000000);
+	background: -o-linear-gradient(top, #4D9501, #000000);
+	background: linear-gradient(top, #4D9501, #000000);
+	
+	border: .1rem outset #4D9501;
+	-webkit-border-radius:.7rem;
+	-moz-border-radius:.7rem;
+	-o-border-radius:.7rem;
+	cursor:pointer;							/* Forma del punter al posicionarse */
+		
+	display:block;							/* Bloque el boton para la siguiente linea */	
+}
+#boton2{
+	width:49.4%;
+	color:#4D9501;							/* Color del texto del boton */
+	font-weight:bolder;						/* Negrita del texto */
+	padding:1rem 3rem 1rem 3rem;			/* Borde interno del boton */
+			
+	background:#01325D;				/* Color de fondo */
+	background: -webkit-linear-gradient(top, #01325D, #000000);
+	background: -moz-linear-gradient(top, #01325D, #000000);
+	background: -o-linear-gradient(top, #01325D, #000000);
+	background: linear-gradient(top, #01325D, #000000);
+		
+	border: .1rem outset #4D9501;
+	-webkit-border-radius:.7rem;
+	-moz-border-radius:.7rem;
+	-o-border-radius:.7rem;
+	border-radius:.7rem;
+	cursor:pointer;							/* Forma del punter al posicionarse */
+		
+	transition-duration:1s;					/* animacion */			
+	display:inline-block;							/* Bloque el boton para la siguiente linea */	
+}
+#boton2:hover{
+	width:49.4%;
+	color:#01325D;							/* Color del texto al posicionarse */
+	font-weight:bolder;						/* Negrita del texto */
+	padding:1rem 3rem 1rem 3rem;			/* Borde interno del boton */
+			
+	background-color:#4D9501;				/* Color de fondo al posicionarse */
+	background: -webkit-linear-gradient(top, #4D9501, #000000);
+	background: -moz-linear-gradient(top, #4D9501, #000000);
+	background: -o-linear-gradient(top, #4D9501, #000000);
+	background: linear-gradient(top, #4D9501, #000000);
+		
+	border: .1rem outset #4D9501;
+	-webkit-border-radius:.7rem;
+	-moz-border-radius:.7rem;
+	-o-border-radius:.7rem;
+	border-radius:.7rem;
+	cursor:pointer;							/* Forma del punter al posicionarse */
+		
+	display:inline-block;							/* Bloque el boton para la siguiente linea */	
+}
+#boton3{
+	color:#4D9501;							/* Color del texto del boton */
+	font-weight:bolder;						/* Negrita del texto */
+	padding:3rem 4rem 3rem 4rem;			/* Borde interno del boton */
+				
+	background:#01325D;				/* Color de fondo */
+	background: -webkit-linear-gradient(top, #01325D, #000000);
+	background: -moz-linear-gradient(top, #01325D, #000000);
+	background: -o-linear-gradient(top, #01325D, #000000);
+	background: linear-gradient(top, #01325D, #000000);
+		
+	border: .1rem outset #4D9501;
+	-webkit-border-radius:.7rem;
+	-moz-border-radius:.7rem;
+	-o-border-radius:.7rem;
+	border-radius:.7rem;
+	cursor:pointer;							/* Forma del punter al posicionarse */
+		
+	transition-duration:1s;					/* animacion */			
+	display:block;							/* Bloque el boton para la siguiente linea */	
+}
+#boton3:hover{
+	color:#000000;							/* Color del texto al posicionarse */
+	font-weight:bolder;						/* Negrita del texto */
+	padding:3rem 4rem 3rem 4rem;			/* Borde interno del boton */
+				
+	background:#4D9501;				/* Color de fondo al posicionarse */
+	background: -webkit-linear-gradient(top, #4D9501, #000000);
+	background: -moz-linear-gradient(top, #4D9501, #000000);
+	background: -o-linear-gradient(top, #4D9501, #000000);
+	background: linear-gradient(top, #4D9501, #000000);
+		
+	border: .1rem outset #4D9501;
+	-webkit-border-radius:.7rem;
+	-moz-border-radius:.7rem;
+	-o-border-radius:.7rem;
+	border-radius:.7rem;
+	cursor:pointer;							/* Forma del punter al posicionarse */
+	
+	display:block;							/* Bloque el boton para la siguiente linea */		
+}
+#boton4{
+	color:#4D9501;							/* Color del texto del boton */
+	font-weight:bolder;						/* Negrita del texto */
+	padding:3rem 3rem 3rem 3rem;			/* Borde interno del boton */
+	margin:0 0 0 1rem;
+					
+	background:#01325D;				/* Color de fondo */
+	background: -webkit-linear-gradient(top, #01325D, #000000);
+	background: -moz-linear-gradient(top, #01325D, #000000);
+	background: -o-linear-gradient(top, #01325D, #000000);
+	background: linear-gradient(top, #01325D, #000000);
+		
+	border: .1rem outset #4D9501;
+	-webkit-border-radius:.7rem;
+	-moz-border-radius:.7rem;
+	-o-border-radius:.7rem;
+	border-radius:.7rem;
+	cursor:pointer;							/* Forma del punter al posicionarse */
+		
+	transition-duration:1s;					/* animacion */			
+	display:block;							/* Bloque el boton para la siguiente linea */	
+}
+#boton4:hover{
+	color:#000000;							/* Color del texto al posicionarse */
+	font-weight:bolder;						/* Negrita del texto */
+	padding:3rem 3rem 3rem 3rem;			/* Borde interno al posicionarse */
+	margin:0 0 0 1rem;
+				
+	background:#4D9501;				/* Color de fondo al posicionarse */
+	background: -webkit-linear-gradient(top, #4D9501, #000000);
+	background: -moz-linear-gradient(top, #4D9501, #000000);
+	background: -o-linear-gradient(top, #4D9501, #000000);
+	background: linear-gradient(top, #4D9501, #000000);
+		
+	border: .1rem outset #4D9501;
+	-webkit-border-radius:.7rem;
+	-moz-border-radius:.7rem;
+	-o-border-radius:.7rem;
+	border-radius:.7rem;
+	cursor:pointer;							/* Forma del punter al posicionarse */
+	
+	display:block;							/* Bloque el boton para la siguiente linea */			
+}
+/* BOTONES*/
+#boton6{
+	color:#4D9501;							/* Color del texto del boton */
+	font-size:.5rem;
+	font-weight:bolder;						/* Negrita del texto */
+	padding:.5rem 1rem .5rem 1rem;			/* Borde interno del boton */	
+				
+	background:#01325D;				/* Color de fondo */
+	background: -webkit-linear-gradient(top, #01325D, #000000);
+	background: -moz-linear-gradient(top, #01325D, #000000);
+	background: -o-linear-gradient(top, #01325D, #000000);
+	background: linear-gradient(top, #01325D, #000000);
+		
+	border: .1rem outset #4D9501;
+	-webkit-border-radius:.7rem;
+	-moz-border-radius:.7rem;
+	-o-border-radius:.7rem;
+	border-radius:.7rem;
+	cursor:pointer;							/* Forma del punter al posicionarse */
+		
+	transition-duration:1s;					/* animacion */			
+	display:block;							/* Bloque el boton para la siguiente linea */	
+}
+#boton6:hover{
+	color:#000000;							/* Color del texto del boton */
+	font-size:.5rem;
+	font-weight:bolder;						/* Negrita del texto */
+	padding:.5rem 1rem .5rem 1rem;			/* Borde interno del boton */	
+			
+	background:#4D9501;				/* Color de fondo */
+	background: -webkit-linear-gradient(top, #4D9501, #000000);
+	background: -moz-linear-gradient(top, #4D9501, #000000);
+	background: -o-linear-gradient(top, #4D9501, #000000);
+	background: linear-gradient(top, #4D9501, #000000);
+	
+	border: .1rem outset #4D9501;
+	-webkit-border-radius:.7rem;
+	-moz-border-radius:.7rem;
+	-o-border-radius:.7rem;
+	cursor:pointer;							/* Forma del punter al posicionarse */
+			
+	display:block;							/* Bloque el boton para la siguiente linea */	
+}
+
+section #asociar #formulario_asociar ul #valor_campo #boton5{
+	width:30%;
+	color:#4D9501;							/* Color del texto del boton */
+	font-weight:bolder;						/* Negrita del texto */
+	padding:1rem 3rem 1rem 3rem;			/* Borde interno del boton */
+				
+	background:#01325D;				/* Color de fondo */
+	background: -webkit-linear-gradient(top, #01325D, #000000);
+	background: -moz-linear-gradient(top, #01325D, #000000);
+	background: -o-linear-gradient(top, #01325D, #000000);
+	background: linear-gradient(top, #01325D, #000000);
+		
+	border: .1rem outset #4D9501;
+	-webkit-border-radius:.7rem;
+	-moz-border-radius:.7rem;
+	-o-border-radius:.7rem;
+	border-radius:.7rem;
+	cursor:pointer;							/* Forma del punter al posicionarse */
+		
+	transition-duration:1s;					/* animacion */			
+	display:inline-block;							/* Bloque el boton para la siguiente linea */	
+}
+section #asociar #formulario_asociar ul #valor_campo #boton5:hover{
+	width:30%;
+	color:#000000;							/* Color del texto del boton */
+	font-weight:bolder;						/* Negrita del texto */
+	padding:1rem 3rem 1rem 3rem;			/* Borde interno del boton */
+			
+	background:#4D9501;				/* Color de fondo */
+	background: -webkit-linear-gradient(top, #4D9501, #000000);
+	background: -moz-linear-gradient(top, #4D9501, #000000);
+	background: -o-linear-gradient(top, #4D9501, #000000);
+	background: linear-gradient(top, #4D9501, #000000);
+	
+	border: .1rem outset #4D9501;
+	-webkit-border-radius:.7rem;
+	-moz-border-radius:.7rem;
+	-o-border-radius:.7rem;
+	cursor:pointer;							/* Forma del punter al posicionarse */
+		
+	display: inline-block;							/* Bloque el boton para la siguiente linea */	
+}
+/* FIN BOTONES */
+
+/* MENSAJE */
+#mensaje_aviso{
+	width:100%;	
+	display:block;
+	margin:0rem auto;	
+	color:#01325D;
+	text-align:center;
+	font-weight:bolder;
+	font-size:.8rem;
+	padding:1rem 1rem 1rem 1rem;
+	text-transform:uppercase;		
+	border: .1rem outset #79BFFD;
+	-webkit-border-radius:.7rem;
+	-moz-border-radius:.7rem;
+	-o-border-radius:.7rem;
+	border-radius:.7rem;
+	
+	background: #79BFFD;				
+	background: -webkit-linear-gradient(top, #79BFFD, #014582);
+	background: -moz-linear-gradient(top, #79BFFD, #014582);
+	background: -o-linear-gradient(top, #79BFFD, #014582);
+	background: linear-gradient(top, #79BFFD, #014582);
+	
+	-webkit-box-shadow:rgba(0,0,0,.55) 0 1px 6px;
+	-moz-box-shadow:rgba(0,0,0,.55) 0 1px 6px;
+	-o-box-shadow:rgba(0,0,0,.55) 0 1px 6px;
+	box-shadow:rgba(0,0,0,.55) 0 1px 6px;
+}
+#mensaje_aviso2 a{
+	color: #01325D;
+	text-decoration:none;
+	vertical-align:text-top;
+	font-weight:bold;
+}
+#mensaje_aviso2{			
+	float:left;
+	margin:0rem 18% 2rem 18%;	
+	width:60%;
+	color:#01325D;
+	text-align:center;
+	font-weight:bolder;
+	padding:1rem 1rem 1rem 1rem;
+	text-transform:uppercase;		
+	border: .1rem outset #79BFFD;
+	-webkit-border-radius:.7rem;
+	-moz-border-radius:.7rem;
+	-o-border-radius:.7rem;
+	border-radius:.7rem;
+	
+	background: #79BFFD;				
+	background: -webkit-linear-gradient(top, #79BFFD, #014582);
+	background: -moz-linear-gradient(top, #79BFFD, #014582);
+	background: -o-linear-gradient(top, #79BFFD, #014582);
+	background: linear-gradient(top, #79BFFD, #014582);
+	
+	-webkit-box-shadow:rgba(0,0,0,.55) 0 1px 6px;
+	-moz-box-shadow:rgba(0,0,0,.55) 0 1px 6px;
+	-o-box-shadow:rgba(0,0,0,.55) 0 1px 6px;
+	box-shadow:rgba(0,0,0,.55) 0 1px 6px;
+}
+#mensaje_aviso3{		
+	display:block;
+	margin:0rem 37%;	
+	width:50%;
+	color:#01325D;
+	text-align:center;
+	font-weight:bolder;
+	padding:1rem 1rem 1rem 1rem;
+	text-transform:uppercase;		
+	border: .1rem outset #79BFFD;
+	-webkit-border-radius:.7rem;
+	-moz-border-radius:.7rem;
+	-o-border-radius:.7rem;
+	border-radius:.7rem;
+	
+	background: #79BFFD;				
+	background: -webkit-linear-gradient(top, #79BFFD, #014582);
+	background: -moz-linear-gradient(top, #79BFFD, #014582);
+	background: -o-linear-gradient(top, #79BFFD, #014582);
+	background: linear-gradient(top, #79BFFD, #014582);
+	
+	-webkit-box-shadow:rgba(0,0,0,.55) 0 1px 6px;
+	-moz-box-shadow:rgba(0,0,0,.55) 0 1px 6px;
+	-o-box-shadow:rgba(0,0,0,.55) 0 1px 6px;
+	box-shadow:rgba(0,0,0,.55) 0 1px 6px;
+}
+/* MENSAJE */
+
+/* ESTILO DE LAS DIFERENTES PAGINAS*/
+
+/* PAGINA LOGIN.HTML */
+section #formulario_ingreso{
+	margin:3rem auto;			/* Centra el formulario y le da un margen superir de 3rem */
+	color:#01325D;				/* Color del texto */
+	text-align:center;			/* Alineacion centra del texto */
+	width:60%;					/* Ancho de 50% */
+	display:block;				/* BLoquea el formulario para que nada se coloque al lado */
+}
+section #formulario_ingreso ul{
+	list-style:none;				/* Elimina los adornos de la lista */
+}
+section #formulario_ingreso ul li{
+	text-align:left;				/* Alinea el texto del contenido de la lista */	
+	display:inline-block;			/* Alinea los <li> */
+}
+section #formulario_ingreso ul li.titulo_campo{	
+	width:70%;						/* Tamaño del titulo */ 
+	background-color:#4D9501;		/* Color fondo de titulo */
+	color:#01325D;					/* Color del texto  */	
+	text-align:center; 				/* Centra el texto */
+	font-weight:bolder;				/* Negrita */
+	padding:1rem;					/* Margen interno */	
+}
+section #formulario_ingreso ul li.nombre_campo{	
+	padding:.5rem;	/* Margen interno */		
+	width:28%;		/* Ancho del li */
+}
+
+section #formulario_ingreso ul li.valor_campo{	
+	padding:.5rem;	/* Margen interno */	
+	width:40%;		/* Ancho del li  */
+}
+section #formulario_ingreso ul li.valor_campo input{
+	width:90%;						/* Ancho del input */
+	border:.1rem solid #01325D;		/* Borde del input */ 	
+	padding:.5rem;					/* Margen interno del input */		
+	color:#01325D;					/* Color del texto en el input */
+}
+/* FIN ESTILO PAGINA LOGIN.HTML */
+
+/* PAGINA CONECTADO.HTML */
+section #cerrar_conectado{
+	color:#FF0000;
+	font-weight:bolder;	
+	text-align:center;
+	margin:5rem auto;
+	width:100%;
+	display:block;
+}
+section #cerrar_conectado a{
+	vertical-align:top;
+}
+/* FIN ESTILO PAGINA CONECTADO.HTML */
+
+/* PAGINA ERROR.HTML */
+
+/* SE USA ES MISMO ESTILO DE CONECTADO.HTML*/
+
+/* FIN ESTILO PAGINA ERROR.HTML*/
+
+/* PAGINA SESION_INICIADA.HTML */
+
+/* SE USA ES MISMO ESTILO DE CONECTADO.HTML*/
+
+/* FIN ESTILO PAGINA SESION_INICIADA.HTML */
+
+/* PAGINA ADMINISTRADOR.HTML */
+header #datos_usuario{
+	color:#FFFFFF;
+	list-style:none;
+	text-align:right;
+	margin:1rem 0 1rem 1rem;	
+	width:79%;
+
+/*	display:block;*/
+}
+header #datos_usuario li{
+	padding:.1rem;
+}
+header #datos_usuario a{
+/*	padding:.1rem;*/
+	color:#FFFFFF;	
+}
+/* FIN ESTILO PAGINA ADMINISTRADOR.HTML */
+
+/* PAGINA CONTRASENA.HTML */
+/*section #menu-acordeon{
+	width:17%;
+	float:left;
+	display:block;
+}*/
+section #contrasena{
+	margin:2rem auto;				/* Centra el formulario y le da un margen superir de 3rem */
+	color:#01325D;				/* Color del texto */
+	text-align:center;			/* Alineacion centra del texto */
+	width:98%;	
+	display:block;
+	float:right;					
+}
+section #contrasena #formulario_contrasena ul{
+	list-style:none;	
+}
+section #contrasena #formulario_contrasena ul li{
+	display:inline-block;
+	text-align:left;
+}
+section #contrasena #formulario_contrasena ul #titulo_campo{
+	width:50%;						/* Tamaño del titulo */ 
+	background-color:#4D9501;		/* Color fondo de titulo */
+	color:#01325D;					/* Color del texto  */	
+	text-align:center; 				/* Centra el texto */
+	font-weight:bolder;				/* Negrita */
+	padding:1rem;				
+}
+section #contrasena #formulario_contrasena ul #nombre_campo{
+	padding:.5rem;	/* Margen interno */		
+	width:15%;		/* Ancho del li */
+}
+section #contrasena #formulario_contrasena ul #valor_campo{
+	padding:.5rem;	/* Margen interno */		
+	width:30%;		/* Ancho del li  */
+	text-align:right;	/* Alineación a la derecha */
+}
+section #contrasena #formulario_contrasena ul #valor_campo input{
+	width:90%;						/* Ancho del input */
+	border:.1rem solid #01325D;		/* Borde del input */ 	
+	padding:.5rem;					/* Margen interno del input */		
+	color:#01325D;					/* Color del texto en el input */
+}
+/*section #contrasena #formulario_contrasena ul #mensaje_aviso{
+	color:#FF0000;
+	text-align:center;
+	font-weight:bolder;
+}*/
+/* FIN ESTILO PAGINA CONTRASENA.HTML */
+
+/* PAGINA INGRESARUSUARIO.HTML */
+section #usuario{
+	margin:2rem auto;				/* Centra el formulario y le da un margen superir de 3rem */
+	color:#01325D;				/* Color del texto */
+	text-align:center;			/* Alineacion centra del texto */
+	width:98%;	
+	display:block;
+	float:right;					
+}
+section #usuario #formulario_usuario ul{
+	list-style:none;	
+}
+section #usuario #formulario_usuario ul li{
+	display:inline-block;
+	text-align:left;
+}
+section #usuario #formulario_usuario ul #titulo_campo{
+	width:50%;						/* Tamaño del titulo */ 
+	background-color:#4D9501;		/* Color fondo de titulo */
+	color:#01325D;					/* Color del texto  */	
+	text-align:center; 				/* Centra el texto */
+	font-weight:bolder;				/* Negrita */
+	padding:1rem;				
+}
+section #usuario #formulario_usuario ul #nombre_campo{
+	padding:.5rem;	/* Margen interno */		
+	width:15%;		/* Ancho del li */
+}
+section #usuario #formulario_usuario ul #valor_campo{
+	padding:.5rem;	/* Margen interno */		
+	width:30%;		/* Ancho del li  */
+	text-align:right;	/* Alineación a la derecha */
+}
+section #usuario #formulario_usuario ul #valor_campo input, select{
+	width:90%;						/* Ancho del input */
+	border:.1rem solid #01325D;		/* Borde del input */ 	
+	padding:.5rem;					/* Margen interno del input */		
+	color:#01325D;					/* Color del texto en el input */
+}
+section #usuario #formulario_usuario ul #valor_campo textarea{
+	width:90%;						/* Ancho del input */
+	border:.1rem solid #01325D;		/* Borde del input */ 	
+	padding:.5rem;					/* Margen interno del input */		
+	color:#01325D;					/* Color del texto en el input */
+}
+section #usuario #formulario_usuario ul #valor_campo select{
+	width:95%;						/* Ancho del input */
+	
+}
+/*section #usuario #formulario_usuario ul #mensaje_aviso{
+	color:#FF0000;
+	text-align:center;
+	font-weight:bolder;
+}*/
+/* FIN ESTILO PAGINA INGRESARUSUARIO.HTML */
+
+/* ESTILO PAGINA MODIFICARUSUARIO.HTML */
+
+/*SE OCUPA EL ESTILO DE INGRESARUSUARIO.HTML*/
+
+
+/* FIN ESTILO PAGINA MODIFICARUSUARIO.HTML */
+
+/* ESTILO PAGINA INGRESARCONTRATO.HTML */
+
+/*SE OCUPA EL ESTILO DE MODIFICARUSUARIO.HTML*/
+
+/* FINAL ESTILO INGRESARCONTRASENA.HTML */
+
+/* ESTILO PAGINA MODIFICARCONTRATO.HTML */
+
+/*SE OCUPA EL ESTILO DE MODIFICARUSUARIO.HTML*/
+
+/* FINAL ESTILO MODIFICARCONTRASENA.HTML */
+
+/* ESTILO PAGINA INGRESARINFORME.HTML */
+
+/*SE OCUPA EL ESTILO DE MODIFICARUSUARIO.HTML*/
+
+/* FINAL ESTILO INGRESARINFORME.HTML */
+
+/* ESTILO PAGINA MODIFICARINFORME.HTML */
+
+/*SE OCUPA EL ESTILO DE MODIFICARUSUARIO.HTML*/
+
+/* FINAL ESTILO MODIFICARINFORME.HTML */
+
+/* ESTILO PAGINA INGRESARSUBINFORME.HTML */
+
+/*SE OCUPA EL ESTILO DE MODIFICARUSUARIO.HTML*/
+
+/* FINAL ESTILO INGRESARSUBINFORME.HTML */
+
+/* ESTILO PAGINA MODIFICARSUBINFORME.HTML */
+
+/*SE OCUPA EL ESTILO DE MODIFICARUSUARIO.HTML*/
+
+/* FINAL ESTILO MODIFICARSUBINFORME.HTML */
+
+/* ESTILO PAGINA ASOCIARUSUARIOCONTRATO.HTML */
+
+/* PAGINA INGRESARUSUARIO.HTML */
+section #asociar{
+	margin:2rem auto;				/* Centra el formulario y le da un margen superir de 3rem */
+	color:#01325D;				/* Color del texto */
+	text-align:center;			/* Alineacion centra del texto */
+	width:98%;	
+	display:block;
+	float:right;					
+}
+section #asociar #formulario_asociar ul{
+	list-style:none;	
+}
+section #asociar #formulario_asociar ul li{	
+	margin:0 auto;
+	display:block;	
+}
+section #asociar #formulario_asociar ul #titulo_campo{
+	width:70%;						/* Tamaño del titulo */ 
+	background-color:#4D9501;		/* Color fondo de titulo */
+	color:#01325D;					/* Color del texto  */	
+	text-align:center; 				/* Centra el texto */
+	font-weight:bolder;				/* Negrita */
+	padding:1rem;				
+}
+/*section #usuario #formulario_usuario ul #nombre_campo{
+	padding:.5rem;	/* Margen interno */		
+	/*width:15%;		/* Ancho del li */
+/*}*/
+section #asociar #formulario_asociar ul #valor_campo{
+	/*padding:.5rem;	/* Margen interno */		
+	width:70%;		/* Ancho del li  */
+	text-align:center;	/* Alineación a la derecha */
+}
+section #asociar #formulario_asociar ul #valor_campo input, select, textarea{
+	width:100%;						/* Ancho del input */	
+	border:.1rem solid #01325D;		/* Borde del input */ 	
+	/*padding:.5rem;					/* Margen interno del input */		
+	color:#01325D;					/* Color del texto en el input */
+}
+/*section #asociar #formulario_asociar ul #mensaje_aviso{
+	color:#FF0000;
+	text-align:center;
+	font-weight:bolder;
+}*/
+/* FIN ESTILO PAGINA INGRESARUSUARIO.HTML */
+
+/* FINAL ESTILO MODIFICARSUBINFORME.HTML */
+
+/* PAGINA CONTRASENA_USR.HTML */
+section #contrasena_usr{
+	margin:2rem .8rem 0rem 0rem;	/* Centra el formulario y le da un margen superir de 3rem */
+	color:#01325D;					/* Color del texto */
+	text-align:center;				/* Alineacion centra del texto */
+	width:98%;
+	display:block;
+}
+section #contrasena_usr #formulario_contrasena ul{
+	list-style:none;	
+}
+section #contrasena_usr #formulario_contrasena ul li{
+	display:inline-block;
+	text-align:left;
+}
+section #contrasena_usr #formulario_contrasena ul #titulo_campo{
+	width:50%;						/* Tamaño del titulo */ 
+	background-color:#4D9501;		/* Color fondo de titulo */
+	color:#01325D;					/* Color del texto  */	
+	text-align:center; 				/* Centra el texto */
+	font-weight:bolder;				/* Negrita */
+	padding:1rem;				
+}
+section #contrasena_usr #formulario_contrasena ul #nombre_campo{
+	padding:.5rem;	/* Margen interno */		
+	width:15%;		/* Ancho del li */
+}
+section #contrasena_usr #formulario_contrasena ul #valor_campo{
+	padding:.5rem;	/* Margen interno */		
+	width:30%;		/* Ancho del li  */
+	text-align:right;	/* Alineación a la derecha */
+}
+section #contrasena_usr #formulario_contrasena ul #valor_campo input{
+	width:90%;						/* Ancho del input */
+	border:.1rem solid #01325D;		/* Borde del input */ 	
+	padding:.5rem;					/* Margen interno del input */		
+	color:#01325D;					/* Color del texto en el input */
+}
+/*section #contrasena_usr #formulario_contrasena ul #mensaje_aviso{
+	color:#FF0000;
+	text-align:center;
+	font-weight:bolder;
+}*/
+/* FIN ESTILO PAGINA CONTRASENA_USR.HTML */
+
+/* PAGINA SISTEMA.HTML - FORMULARIO */
+section #botones_sistema{
+	margin:2rem auto;				/* Centra el formulario y le da un margen superir de 3rem */
+	color:#01325D;					/* Color del texto */
+	text-align:center;				/* Alineacion centra del texto */
+	width:98%;
+	display:block;
+}
+section #botones_sistema #formulario_botones ul{
+	list-style:none;		
+}
+section #botones_sistema #formulario_botones ul li{
+	display:inline-block;
+	text-align:center;
+}
+/* FIN ESTILO PAGINA SISTEMA.HTML - FORMULARIO */
+
+/* PAGINA SUBIRDOCUMENTO.HTML */
+section #subir_documento{
+	margin:2rem auto;			/* Centra el formulario y le da un margen superir de 3rem */
+	color:#01325D;				/* Color del texto */
+	text-align: center;			/* Alineacion centra del texto */
+	width:98%;		
+	display:block;
+}
+section #subir_documento #formulario_documento ul{
+	list-style:none;	
+	text-align:left;
+}
+section #subir_documento #formulario_documento ul li{
+	display:inline-block;
+}
+section #subir_documento #formulario_documento ul #titulo_campo{
+	width:97.6%;						/* Tamaño del titulo */ 
+	background-color:#4D9501;		/* Color fondo de titulo */
+	color:#01325D;					/* Color del texto  */	
+	text-align:center; 					/* Centra el texto */
+	font-weight:bolder;				/* Negrita */
+	padding:1rem;				
+}
+section #subir_documento #formulario_documento ul #nombre_campo{
+	padding:.5rem 0rem .5rem 0rem;	/* Margen interno */		
+	width:9%;							/* Ancho del li */
+}
+section #subir_documento #formulario_documento ul #valor_campo{
+	padding:.5rem 0rem .5rem 0rem;	/* Margen interno */		
+	width:20%;							/* Ancho del li  */
+	text-align:left;					/* Alineación a la derecha */
+}
+section #subir_documento #formulario_documento ul #valor_campo2{
+	padding:.5rem 0rem .5rem 0rem;	/* Margen interno */		
+	width:50%;							/* Ancho del li  */
+	text-align:left;					/* Alineación a la derecha */
+}
+section #subir_documento #formulario_documento ul #valor_campo2 input, select, textarea{
+	width:95%;
+	border:.1rem solid #01325D;		/* Borde del input */ 	
+	padding:.5rem 0rem .5rem 0rem;	/* Margen interno del input */		
+	color:#01325D;					/* Color del texto en el input */
+}	
+section #subir_documento #formulario_documento ul #valor_campo input, select{
+	width:95%;						/* Ancho del input */
+	border:.1rem solid #01325D;		/* Borde del input */ 	
+	padding:.5rem 0rem .5rem 0rem;	/* Margen interno del input */		
+	color:#01325D;					/* Color del texto en el input */
+}
+section #subir_documento #formulario_documento ul #boton_subir{
+	margin:0 auto;
+}
+/*section #usuario #formulario_usuario ul #mensaje_aviso{
+	color:#FF0000;
+	text-align:center;
+	font-weight:bolder;
+}*/
+/* FIN ESTILO PAGINA SUBIRDOCUMENTO.HTML */
+
+/* PAGINA ANADIRDESTINATARIO.HTML */
+section #destinatarios{
+	margin:2rem auto;				/* Centra el formulario y le da un margen superir de 3rem */
+	color:#01325D;					/* Color del texto */
+	text-align:center;				/* Alineacion centra del texto */
+	width:98%;
+	display:block;
+}
+section #destinatarios #formulario_destinatario ul{
+	list-style:none;	
+}
+section #destinatarios #formulario_destinatario ul li{
+	display:inline-block;
+	text-align:left;
+}
+section #destinatarios #formulario_destinatario ul #titulo_campo{
+	width:50%;						/* Tamaño del titulo */ 
+	background-color:#4D9501;		/* Color fondo de titulo */
+	color:#01325D;					/* Color del texto  */	
+	text-align:center; 				/* Centra el texto */
+	font-weight:bolder;				/* Negrita */
+	padding:1rem;				
+}
+section #destinatarios #formulario_destinatario ul #nombre_campo{
+	padding:.5rem;	/* Margen interno */		
+	width:15%;		/* Ancho del li */
+}
+section #destinatarios #formulario_destinatario ul #valor_campo{
+	padding:.5rem;	/* Margen interno */		
+	width:30%;		/* Ancho del li  */
+	text-align:right;	/* Alineación a la derecha */
+}
+section #destinatarios #formulario_destinatario ul #valor_campo input, select{
+	width:90%;						/* Ancho del input */
+	border:.1rem solid #01325D;		/* Borde del input */ 	
+	padding:.5rem;					/* Margen interno del input */		
+	color:#01325D;					/* Color del texto en el input */
+}
+section #destinatarios #formulario_destinatario ul #valor_campo textarea{
+	width:90%;						/* Ancho del input */
+	border:.1rem solid #01325D;		/* Borde del input */ 	
+	padding:.5rem;					/* Margen interno del input */		
+	color:#01325D;					/* Color del texto en el input */
+}
+section #destinatarios #formulario_destinatario ul #valor_campo select{
+	width:95%;						/* Ancho del input */
+	
+}
+/* FIN ESTILO PAGINA INGRESARUSUARIO.HTML */
+
+/* ESTILO PAGINA REVISARDOCUMENTO.HTML */
+section{
+	text-align:center;	
+}
+section article{
+	margin-top:1rem;
+}
+section #visor{
+	width:53%;
+	height:100%;
+}
+section #visor iframe{
+	width:99%; 
+	height:50rem;
+}
+section #descripcion{
+	color:#01325D;					/* Color del texto */		
+	width:44%;
+	vertical-align:top;
+}
+section article{
+	display:inline-block;
+}
+section fieldset legend{
+	text-align:left;
+}
+section #descripcion #titulo{
+	padding:.5rem;	/* Margen interno */			
+	width:24%;		/* Ancho del li */		
+	text-align:left;
+}
+section #descripcion #resultado{
+	padding:.5rem;	/* Margen interno */		
+	width:68%;		/* Ancho del li  */
+	height:auto;	
+	text-align:left;	/* Alineación a la derecha */
+}
+section #descripcion label{
+	display:inline-block;
+}
+/* FIN ESTILO PAGINA REVISARDOCUMENTO.HTML */
+
+/*ESTILO PAGINA CORREO.HTML*/
+section #correo{
+	margin:2rem auto;				/* Centra el formulario y le da un margen superir de 3rem */
+	color:#01325D;					/* Color del texto */
+	text-align:center;				/* Alineacion centra del texto */
+	width:98%;
+	display:block;
+}
+section #correo #formulario_correo ul{
+	list-style:none;	
+}
+section #correo #formulario_correo ul li{
+	display:inline-block;
+	text-align:left;
+}
+section #correo #formulario_correo ul #nombre_campo{	
+	padding:.5rem 0rem .5rem .5rem;	/* Margen interno */		
+	width:4%;		/* Ancho del li */
+}
+section #correo #formulario_correo ul #valor_campo{
+padding:.5rem;	/* Margen interno */		
+	width:50%;		/* Ancho del li  */
+	text-align:right;	/* Alineación a la derecha */
+}
+section #correo #formulario_correo ul #valor_campo input{
+	width:97%;						/* Ancho del input */
+	border:.1rem solid #01325D;		/* Borde del input */ 	
+	padding:.5rem;					/* Margen interno del input */		
+	color:#01325D;					/* Color del texto en el input */
+}
+section #correo #formulario_correo ul #valor_campo2{
+	padding:.5rem 0rem .5rem 0rem;	/* Margen interno */		
+	width:56%;		/* Ancho del li  */
+	text-align:center;	/* Alineación a la derecha */
+}
+
+section #correo #formulario_correo ul li textarea{	
+	width:98%;						/* Ancho del textArea */
+	border:.1rem solid #01325D;		/* Borde del textArea */ 	
+	padding:.5rem 0rem .5rem 0rem;					/* Margen interno del textArea */		
+	color:#01325D;					/* Color del texto en el TextArea */
+}
+
+/*FIN ESTILO PAGINA CORREO.HTML*/
